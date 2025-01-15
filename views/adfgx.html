@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style type="text/css">
+    svg:not(:root).svg-inline--fa { overflow: visible; }
+    .svg-inline--fa { display: inline-block; font-size: inherit; height: 1em; overflow: visible; vertical-align: -0.125em; }
+    /* Add more styling rules as necessary */
+  </style>
   <link rel="stylesheet" type="text/css" href="../css/main.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <title>ADFGX ЦИФР</title>
@@ -12,7 +17,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </head>
-<body>
+<body data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
   
   <!-- ЦИФРЫН НЭР -->
   <div class="title">
@@ -23,9 +28,10 @@
   <div id="myinformation" class="information_content">
     <!-- агуулга -->
     <div class="information-content">
-      <div><span class="close1">&times;</span></div>
+      <div><span class="close1">×</span></div>
       <div class="information-body">
-        <p>1. ADFGX цифр нь Дэлхийн I дайны үед Германы армийн ашиглаж байсан талбайн цифр юм. Энэ нь ADFGVX цифрийн дөхөж буй хувилбар юм.
+        <p>
+          1. ADFGX цифр нь Дэлхийн I дайны үед Германы армийн ашиглаж байсан талбайн цифр юм. Энэ нь ADFGVX цифрийн дөхөж буй хувилбар юм.
           <br><br>2. ADFGX нь өөрчлөгдсөн Polybius дөрвөлжин болон ганц баганын шилжүүлэлтийг хослуулсан бутархай шилжүүлэлтийн цифр юм.
           <br><br>3. Цифр нь ciphertext-д ашигласан таван боломжит үсэг: A, D, F, G болон X.
           <br><br>4. ADFGVX цифрийн 'түлхүүр' нь 'түлхүүр дөрвөлжин' болон түлхүүр үг юм.
@@ -38,11 +44,11 @@
     <!-- агуулга -->
     <div class="instructions-content">
       <div class="instructions-header">
-        <span class="close2">&times;</span>
+        <span class="close2">×</span>
       </div>
       <div class="instructions-body">
         <p>
-          <br>1. Шифрлэх текстээ оруулна уу
+          <br>1. Шифрлэх текстээ оруулна уу.
           <br><br>2. 'j' үсгийг орхисон бүх үсгийг агуулсан 5*5 түлхүүр дөрвөлжин оруулна уу.
           <br><br>Жишээ: phqgmeaynofdxkrcvszwbutil
           <br><br>3. Ямар ч үгийг түлхүүр болгон оруулна уу.
@@ -113,15 +119,15 @@
   </div>
 
   <footer>
-    <p><a href="5x5.html" target="_blank">Түлхүүр дөрвөлжин хийгч</a></p>
+    <p style="font-family: Arial, sans-serif; font-size: 12px;">
+      <a href="5x5.html" target="_blank">Түлхүүр дөрвөлжин хийгч</a>
+    </p>
   </footer>
 
   <script type="text/javascript" src="../js/adfgx.js"></script>
   <script type="text/javascript" src="../js/main.js"></script>
   <script>
-    AOS.init({
-      duration: 1200,
-    })
+    AOS.init({ duration: 1200 });
   </script>
 </body>
 </html>
