@@ -9,29 +9,36 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-       
   <link rel="stylesheet" type="text/css" href="./css/main.css">
   <title>Криптографийн хэрэгслүүд</title>
 
   <style>
+    /* Background Video */
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* Ensure video stays behind the content */
+    }
+
+    /* Page Styles */
     body {
-      background-image: url('zurag/ar.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
       margin: 0;
       font-family: Arial, sans-serif;
     }
 
-    /* Гарчигийн стиль */
+    /* Title Styling */
     h1 {
-      color: #FFD700;
-      text-align: center;
-      font-size: 48px; /* Томруулсан */
-      font-weight: bold;
-      margin-top: 30px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    }
+    color: #09bce7;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
 
     .container {
       display: grid;
@@ -43,18 +50,17 @@
     }
 
     .ciphers_button {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #FFD700;
-      padding: 15px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 2px solid #00BFFF;
-      transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
-      cursor: pointer;
-    }
-
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #09bce7;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #00BFFF;
+    transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
     .ciphers_button:hover {
       background-color: #FFD700;
       color: #000;
@@ -65,10 +71,16 @@
 </head>
 <body>
 
-  <!-- Гарчиг -->
+  <!-- Background Video -->
+  <video class="background-video" autoplay muted loop>
+    <source src="zurag/backgrou.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Title -->
   <h1>Криптографийн хэрэгслүүд</h1>
 
-  <!-- Товчлуудын контейнер -->
+  <!-- Buttons Container -->
   <div class="container" data-aos="fade-up">
     <button class="ciphers_button" onclick="location.href='./views/adfgvx.html'">Adfgvx Cipher</button>
     <button class="ciphers_button" onclick="location.href='./views/adfgx.html'">Adfgx Cipher</button>
