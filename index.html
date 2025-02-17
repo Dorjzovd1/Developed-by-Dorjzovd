@@ -8,8 +8,20 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4a00e0, #8e2de2);
+            background: none; /* Remove the background image */
             color: #fff;
+            overflow: hidden; /* Prevents any content from overflowing */
+        }
+
+        /* Video Background */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the video covers the whole background */
+            z-index: -1; /* Puts the video behind all other content */
         }
 
         /* Header */
@@ -18,11 +30,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
         }
 
         .logo img {
-            max-height: 50px; /* Зургийн өндрийг тохируулах */
+            max-height: 50px;
         }
 
         nav {
@@ -46,10 +58,12 @@
             align-items: center;
             justify-content: space-between;
             padding: 50px;
+            flex-wrap: wrap; /* Flexible positioning */
         }
 
         .main-content {
             max-width: 50%;
+            padding: 10px;
         }
 
         .main-content h1 {
@@ -86,9 +100,12 @@
 
         .main-image {
             position: relative;
+            max-width: 400px;
+            width: 100%;
         }
 
         .main-image img {
+            width: 100%;
             max-width: 400px;
         }
 
@@ -112,9 +129,95 @@
         .dot.active {
             opacity: 1;
         }
+
+        /* Media Queries for Responsive Design */
+        @media screen and (max-width: 1366px) {
+            .main {
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .main-content {
+                max-width: 100%;
+            }
+
+            .main-content h1 {
+                font-size: 36px;
+            }
+
+            .main-content p {
+                font-size: 16px;
+            }
+
+            .button-primary {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .main {
+                padding: 20px;
+            }
+
+            .main-content {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .main-content h1 {
+                font-size: 30px;
+            }
+
+            .main-content p {
+                font-size: 14px;
+            }
+
+            .button-primary {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+
+            .main-image img {
+                max-width: 300px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
+            .main-content h1 {
+                font-size: 24px;
+            }
+
+            .main-content p {
+                font-size: 12px;
+            }
+
+            .button-primary {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+
+            .main-image img {
+                max-width: 250px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Video Background -->
+    <video autoplay muted loop class="video-background">
+        <source src="zurag/backgrou.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <!-- Header -->
     <header>
         <div class="logo">
@@ -140,5 +243,4 @@
             <img src="zurag/1.png" alt="Lock Icon">
         </div>
     </div>
-</body>
 </html>
