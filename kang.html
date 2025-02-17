@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="mn">
 <head>
   <meta charset="UTF-8">
@@ -8,35 +8,52 @@
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <style>
+    /* Video Background */
     body {
-      background-image: url('zurag/1.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      overflow: hidden;
     }
+
+    /* Video Element for Background */
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the video covers the entire background */
+      z-index: -1; /* Keeps the video behind the content */
+    }
+
     .flex-container {
       display: flex;
       justify-content: space-between;
       padding: 20px;
     }
+
     .flex-item-left, .flex-item-right {
       width: 45%;
       padding: 20px;
-      background-color: rgba(26, 40, 170, 0.8);
+      background-color: #04040a;
       border-radius: 10px;
     }
+
     .flex-item-left h2, .flex-item-right h2 {
       color: white;
       text-align: center;
     }
+
     .flex-item-left p, .flex-item-right ul {
       font-family: Arial, sans-serif;
       font-size: 18px;
       color: white;
     }
+
     .mybutton {
       padding: 10px 20px;
-      background-color: #4CAF50;
+      background-color: #10c2dc;
       color: white;
       border: none;
       border-radius: 5px;
@@ -45,9 +62,11 @@
       display: block;
       margin: 20px auto;
     }
+
     .mybutton:hover {
       background-color: #45a049;
     }
+
     .text-align1 li {
       list-style: none;
       margin-bottom: 10px;
@@ -55,6 +74,12 @@
   </style>
 </head>
 <body data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+  <!-- Video Background -->
+  <video autoplay muted loop class="video-background">
+    <source src="zurag/backgrou.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
   <div class="flex-container">
     <div data-aos="slide-right" class="flex-item-left aos-init aos-animate">
       <h2>Шифр гэж юу вэ?</h2>
@@ -66,7 +91,7 @@
     </div>
     
     <div data-aos="slide-left" class="flex-item-right aos-init aos-animate">
-      <h2>Мэдээллээ 25 ялгаатай аргаар шифрлээрэй!</h2>
+      <h2>Мэдээллээ 26 ялгаатай аргаар шифрлээрэй!</h2>
       <ul class="text-align1">
         <li>1. Шифрлэх аргаа сонгоно уу</li>
         <li>2. Нууцлах мэдээллээ оруулна уу</li>
@@ -76,6 +101,7 @@
       </ul>
     </div>
   </div>
+
   <script>
     AOS.init({ duration: 1200 });
   </script>
