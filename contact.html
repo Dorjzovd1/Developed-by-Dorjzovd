@@ -8,8 +8,19 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4a00e0, #8e2de2);
             color: #fff;
+            overflow: hidden;
+        }
+
+        /* Video Background */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         /* Header */
@@ -18,7 +29,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .logo img {
@@ -120,7 +131,7 @@
         /* About Section */
         .about-section {
             padding: 50px;
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .about-section h1 {
@@ -147,6 +158,12 @@
     </style>
 </head>
 <body>
+    <!-- Video Background -->
+    <video class="video-background" autoplay muted loop>
+        <source src="/zurag/backgrou.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <!-- Header -->
     <header>
         <div class="logo">
@@ -159,14 +176,13 @@
         </nav>
     </header>
 
-    
-
     <!-- About Section -->
     <div class="about-section">
         <h1>Веб сайт хөгжүүлэгч Т.Доржзовд</h1>
         <p>
            Миний бие сонсогч Т.Доржзовд нь Үндэсний Батлан Хамгаалахын их сургуулийн Цэргийн холбоо, кибер аюулгүй байдлын тэнхимд суралцдаг. 2023 оноос эхлэн энэхүү веб сайтыг хийж хөгжүүлж байна.
-        
+        </p>
+
         <h2>Хөгжүүлэгчид илгээх санал хүсэлт</h2>
         <ul>
             <li>Утас: 86889684</li>
