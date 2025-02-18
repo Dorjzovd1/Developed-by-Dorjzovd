@@ -8,22 +8,19 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: url('/zurag/1.jpg') no-repeat center center fixed;
-            background-size: cover;
             color: #fff;
-            overflow-x: hidden; /* Ensures no horizontal scroll */
+            overflow: hidden;
         }
 
-
-        /* Background Overlay */
-        .background-overlay {
+        /* Full screen video background */
+        .video-background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0); /* Darkens the background for better text contrast */
-            z-index: -1; /* Puts it behind the content */
+            object-fit: cover;
+            z-index: -1;
         }
 
         /* Header */
@@ -32,7 +29,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            background-color: rgba(0, 0, 0, 0.5); /* Slight transparency for better contrast */
+            background-color: rgba(0, 0, 0, 0.5); /* dark overlay for header */
         }
 
         .logo img {
@@ -102,14 +99,6 @@
             border: 2px solid #fff;
         }
 
-        .main-image {
-            position: relative;
-        }
-
-        .main-image img {
-            max-width: 400px;
-        }
-
         /* Footer Dots */
         .dots {
             display: flex;
@@ -134,7 +123,7 @@
         /* About Section */
         .about-section {
             padding: 50px;
-            background-color: rgba(0, 0, 0, 0.6); /* Dark background for better contrast */
+            background-color: rgba(0, 0, 0, 0.7); /* dark overlay for the about section */
         }
 
         .about-section h1 {
@@ -161,8 +150,11 @@
     </style>
 </head>
 <body>
-    <!-- Background Overlay -->
-    <div class="background-overlay"></div>
+    <!-- Video Background -->
+    <video class="video-background" autoplay loop muted>
+        <source src="/zurag/backgrou.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <!-- Header -->
     <header>
@@ -180,8 +172,9 @@
     <div class="about-section">
         <h1>Веб сайт хөгжүүлэгч Т.Доржзовд</h1>
         <p>
-           Миний бие сонсогч Т.Доржзовд нь Үндэсний Батлан Хамгаалахын их сургуулийн Цэргийн холбоо, кибер аюулгүй байдлын тэнхимд суралцдаг. 2023 оноос эхлэн энэхүү веб сайтыг хийж хөгжүүлж байна.
+            Миний бие сонсогч Т.Доржзовд нь Үндэсний Батлан Хамгаалахын их сургуулийн Цэргийн холбоо, кибер аюулгүй байдлын тэнхимд суралцдаг. 2023 оноос эхлэн энэхүү веб сайтыг хийж хөгжүүлж байна.
         </p>
+
         <h2>Хөгжүүлэгчид илгээх санал хүсэлт</h2>
         <ul>
             <li>Утас: 86889684</li>
