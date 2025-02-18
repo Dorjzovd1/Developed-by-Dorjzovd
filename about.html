@@ -9,18 +9,19 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: #fff;
-            overflow: hidden; /* Prevent scrollbars */
+            height: 100vh;
+            overflow: hidden;
         }
 
-        /* Background Video */
-        video.background-video {
+        /* Видео фон */
+        .video-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1; /* Make sure it's in the background */
+            z-index: -1;
         }
 
         /* Header */
@@ -29,7 +30,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .logo img {
@@ -51,100 +52,17 @@
             text-decoration: underline;
         }
 
-        /* Main Section */
-        .main {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 50px;
-        }
-
-        .main-content {
-            max-width: 50%;
-        }
-
-        .main-content h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .main-content p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 20px;
-        }
-
-        .button {
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .button-primary {
-            background-color: #ff0076;
-            color: #fff;
-        }
-
-        .button-secondary {
-            background-color: transparent;
-            color: #fff;
-            border: 2px solid #fff;
-        }
-
-        .main-image {
-            position: relative;
-        }
-
-        .main-image img {
-            max-width: 400px;
-        }
-
-        /* Footer Dots */
-        .dots {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            gap: 10px;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            background-color: #fff;
-            border-radius: 50%;
-            opacity: 0.5;
-            cursor: pointer;
-        }
-
-        .dot.active {
-            opacity: 1;
-        }
-
         /* About Section */
         .about-section {
             padding: 50px;
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .about-section h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        .about-section h1, .about-section h2, .about-section p, .about-section ul {
+            color: #fff;
         }
 
-        .about-section p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
+        /* Content styling (Example) */
         .about-section ul {
             font-size: 18px;
             list-style-type: none;
@@ -154,13 +72,13 @@
         .about-section ul li {
             margin-bottom: 10px;
         }
-
     </style>
 </head>
 <body>
-    <!-- Background Video -->
-    <video class="background-video" autoplay loop muted>
-        <source src="/zurag/backgrou.mp4" type="video/mp4">
+
+    <!-- Видео фон -->
+    <video class="video-background" autoplay loop muted>
+        <source src="zurag/backgrou.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
@@ -185,7 +103,7 @@
         </p>
         <h2>Зорилго</h2>
         <p>
-            Сонсогч Доржзовд миний уг веб сайтыг зохион байгуулж хөгжүүлсэн гол зорилго нь мэдээллийн нууцлал, бүрэн бүтэн байдал, үнэн зөв, байдлыг хангах мөн сургалтын орчинд онол болон практикаар мэдлэгийг олж авах боломжийг олгож буй бүтээл юм  Манай вэб сайт нь криптографийн олон төрлийн алгоритм, хэрэгсэл, болон түүний хэрэглээг танилцуулах мөн сургалтын орчинд ашиглаж үргэлж хөгжүүлэх зорилготой. 
+            Сонсогч Доржзовд миний уг веб сайтыг зохион байгуулж хөгжүүлсэн гол зорилго нь мэдээллийн нууцлал, бүрэн бүтэн байдал, үнэн зөв, байдлыг хангах мөн сургалтын орчинд онол болон практикаар мэдлэгийг олж авах боломжийг олгож буй бүтээл юм. Манай вэб сайт нь криптографийн олон төрлийн алгоритм, хэрэгсэл, болон түүний хэрэглээг танилцуулах мөн сургалтын орчинд ашиглаж үргэлж хөгжүүлэх зорилготой.
         </p>
         <h2>Манай үйлчилгээ</h2>
         <ul>
@@ -195,5 +113,6 @@
             <li>Криптографийн техникийг амьдралд хэрхэн хэрэгжүүлэх талаар зөвлөгөө</li>
         </ul>
     </div>
+
 </body>
 </html>
